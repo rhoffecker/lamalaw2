@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
+  get 'welcome/features'
+
+  get 'welcome/contact'
+
+  get 'welcome/about'
+
   devise_for :users
   resources :user_details
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user_details#index'
+  root to: 'user_details#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
