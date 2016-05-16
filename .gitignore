@@ -15,3 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
+
+/config/initialzers/setup_mail.rb
