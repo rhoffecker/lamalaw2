@@ -10,13 +10,14 @@
 
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-  
+
   <%= link_to "Home", root_path %>
-  <%= link_to "Features", root_path %>
-  <%= link_to "Contact", root_path %> 
-  <%= link_to "About Us", root_path %>
+  <%= link_to "Features", welcome_features_path %>
+  <%= link_to "Contact", welcome_contact_path %>
+  <%= link_to "About Us", welcome_about_path %>
+  <%= link_to "User Details", user_details_path %>
   <%= link_to "Login", root_path %>
-  
+
 <%= yield %>
 
 </body>
