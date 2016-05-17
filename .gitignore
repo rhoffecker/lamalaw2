@@ -16,4 +16,5 @@
 !/log/.keep
 /tmp
 
-/config/initialzers/setup_mail.rb
+# Ignore mail setup file.
+/config/initializers/setup_mail.rb
