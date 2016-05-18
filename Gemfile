@@ -52,3 +52,5 @@ group :development do
 end
 
 gem 'devise'
+
+gem 'bootstrap-sass', '~> 2.3.2.0'

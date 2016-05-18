@@ -8,17 +8,21 @@
 </head>
 <body>
 
+  <div class="container">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
-  <%= link_to "Home", root_path %>
-  <%= link_to "Features", welcome_features_path %>
-  <%= link_to "Contact", welcome_contact_path %>
-  <%= link_to "About Us", welcome_about_path %>
-  <%= link_to "User Details", user_details_path %>
-  <%= link_to "Login", root_path %>
+  <ul class="nav nav-tabs">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Features", welcome_features_path %></li>
+    <li><%= link_to "Contact", welcome_contact_path %></li>
+    <li><%= link_to "About Us", welcome_about_path %></li>
+    <li><%= link_to "User Details", user_details_path %></li>
+    <li><%= link_to "Login", root_path %></li>
+  </ul>
 
-<%= yield %>
+  <%= yield %>
+</div>
 
 </body>
 </html>
