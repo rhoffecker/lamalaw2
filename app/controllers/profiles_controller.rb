@@ -1,8 +1,11 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:show, :edit, :update]
 
   # GET /profiles
   # GET /profiles.json
+  def profile
+  end
+
   def index
     @profiles = Profile.all
   end
@@ -10,6 +13,11 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @profile = Profile.find_by user_id: current_user.id
+#     unless current_user.id == @profile.user_id
+#       redirect_to profile_path(current_user)
+#       return
+#     end
   end
 
   # GET /profiles/new
@@ -19,6 +27,8 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/1/edit
   def edit
+    @profile = Profile.find_by user_id: current_user.id
+    @attributes = Profile.attribute_names - %w(id user_id create_at update_at)
   end
 
   # POST /profiles
@@ -69,6 +79,6 @@ class ProfilesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def profile_params
-      params.require(:profile).permit(:user_id, :integer, :first_name, :string, :last_name, :string, :birth_date, :date, :ssn, :string, :home_phone, :string, :work_phone, :string, :cell_phone, :string)
+      params.require(:profile).permit(:user_id, :first_name, :last_name, :birth_date, :ssn, :home_phone, :work_phone, :cell_phone, :case_number)
     end
 end

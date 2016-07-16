@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :profiles
+  resources :profiles, edit: [:only]
   get 'welcome/index'
 
   get 'welcome/features'
