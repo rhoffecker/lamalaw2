@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :profiles, edit: [:only]
+  resources :profiles, only: [:edit, :show, :update]
   get 'welcome/index'
 
   get 'welcome/features'
@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/about'
 
   devise_for :users
-  resources :user_details
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
