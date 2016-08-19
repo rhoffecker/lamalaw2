@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718203529) do
+ActiveRecord::Schema.define(version: 20160819232932) do
+
+  create_table "documents", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "doc_type"
+    t.datetime "create_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "profiles", force: :cascade do |t|
     t.string "user_id"

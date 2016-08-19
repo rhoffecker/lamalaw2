@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @document.user_id %>
+</p>
+
+<p>
+  <strong>Doc type:</strong>
+  <%= @document.doc_type %>
+</p>
+
+<p>
+  <strong>Create date:</strong>
+  <%= @document.create_date %>
+</p>
+
+<%= link_to 'Edit', edit_document_path(@document) %> |
+<%= link_to 'Back', documents_path %>
