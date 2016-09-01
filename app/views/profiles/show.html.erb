@@ -20,6 +20,11 @@
 </p>
 
 <p>
+  <strong>User ID:</strong>
+  <%= current_user.email %>
+</p>
+
+<p>
   <strong>Birth date:</strong>
   <%= @profile.birth_date %>
 </p>
@@ -49,5 +54,5 @@
   <%= @profile.case_number %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> 
+<%= link_to 'Edit', edit_profile_path(@profile) %>
 
