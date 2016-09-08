@@ -1,7 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
+  <strong>Current User ID:</strong>
+  <%= current_user.id %>
+</p>
+
+<p>
+  <strong>User ID on Document:</strong>
   <%= @document.user_id %>
 </p>
 

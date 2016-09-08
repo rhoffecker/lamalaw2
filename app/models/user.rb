@@ -5,4 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   has_one :profile
   before_create :build_profile
+  has_many :documents
 end
