@@ -3,22 +3,21 @@
   <p>
   <strong>User:</strong>
   <%= @profile.user_id %>
-</p> 
+</p>
 <p>
   <strong>Current User:</strong>
   <%= current_user.id %>
 </p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
+  <strong>Name:</strong>
+  <%= @profile.first_name + " " + @profile.last_name %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
+  <strong>Case Number:</strong>
+  <%= @profile.case_number %>
 </p>
-
 <p>
   <strong>User Name:</strong>
   <%= current_user.email %>
@@ -50,8 +49,12 @@
 </p>
 
 <p>
-  <strong>Case Number:</strong>
-  <%= @profile.case_number %>
+  <strong>Address:</strong><br>
+  <%= @profile.add_line1  %><br>
+  <%= @profile.add_line2  %><br>
+  <%= @profile.add_city  %><br>
+  <%= @profile.add_state  %>
+  <%= @profile.add_zip  %><br>
 </p>
 
 <%= link_to 'Edit', edit_profile_path(@profile) %>
