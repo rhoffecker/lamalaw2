@@ -27,7 +27,26 @@
   <strong>Birth date:</strong>
   <%= @profile.birth_date %>
 </p>
-
+<p>
+  <strong>Gender:</strong>
+  <%= @profile.gender %>
+</p>
+<p>
+  <strong>Height:</strong>
+  <%= @profile.height %>
+</p>
+<p>
+  <strong>Weight:</strong>
+  <%= @profile.weight %>
+</p>
+<p>
+  <strong>DL Number:</strong>
+  <%= @profile.dl_number %>
+</p>
+<p>
+  <strong>DL State:</strong>
+  <%= @profile.dl_state %>
+</p>
 <p>
   <strong>Ssn:</strong>
   <%= @profile.ssn %>
@@ -50,12 +69,23 @@
 
 <p>
   <strong>Address:</strong><br>
-  <%= @profile.add_line1  %><br>
-  <%= @profile.add_line2  %><br>
-  <%= @profile.add_city  %><br>
-  <%= @profile.add_state  %>
-  <%= @profile.add_zip  %><br>
+  <% if @profile.add_line1.present? %>
+    <%= @profile.add_line1  %><br>
+  <% end %>
+  <% if @profile.add_line2.present? %>
+    <%= @profile.add_line2  %><br>
+  <% end %>
+  <% if @profile.add_city.present? %>
+    <%= @profile.add_city  %>,
+  <% end %>
+  <% if @profile.add_state.present? %>
+    <%= @profile.add_state  %>
+  <% end %>
+  <% if @profile.add_zip.present? %>
+    <%= @profile.add_zip  %><br>
+  <% end %>
 </p>
+
 
 <%= link_to 'Edit', edit_profile_path(@profile) %>
 
