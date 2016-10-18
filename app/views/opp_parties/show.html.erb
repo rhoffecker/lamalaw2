@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>User ID:</strong>
+  <%= @opp_party.user_id %>
+</p>
+<p>
+<p>
+  <strong>Name:</strong>
+  <%= @opp_party.first_name + " " + @opp_party.last_name %>
+</p>
+<p>
+  <strong>Birth date:</strong>
+  <%= @opp_party.birth_date %>
+</p>
+<p>
+  <strong>Ssn:</strong>
+  <%= @opp_party.ssn %>
+</p>
+<p>
+  <strong>Home phone:</strong>
+  <%= @opp_party.home_phone %>
+</p>
+
+
+<%= link_to 'Edit', edit_opp_party_path(@opp_party) %> |
+<%= link_to 'Back', opp_parties_path %>

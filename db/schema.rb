@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160924170841) do
+ActiveRecord::Schema.define(version: 20161005200943) do
 
   create_table "documents", force: :cascade do |t|
     t.integer  "user_id"
@@ -22,6 +22,44 @@ ActiveRecord::Schema.define(version: 20160924170841) do
   end
 
   add_index "documents", ["user_id"], name: "index_documents_on_user_id"
+
+  create_table "opp_parties", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "string"
+    t.date     "birth_date"
+    t.date     "date"
+    t.string   "gender"
+    t.string   "height"
+    t.string   "weight"
+    t.string   "dl_number"
+    t.string   "dl_state"
+    t.string   "ssn"
+    t.string   "home_phone"
+    t.string   "work_phone"
+    t.string   "cell_phone"
+    t.string   "add_line1"
+    t.string   "add_line2"
+    t.string   "add_city"
+    t.string   "add_state"
+    t.string   "add_zip"
+    t.date     "az_since"
+    t.string   "email_listed"
+    t.string   "employer"
+    t.string   "job_title"
+    t.string   "emp_add_line1"
+    t.string   "emp_add_line2"
+    t.string   "emp_add_city"
+    t.string   "emp_add_state"
+    t.string   "emp_add_zip"
+    t.string   "emp_phone"
+    t.string   "emp_fax"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "opp_parties", ["user_id"], name: "index_opp_parties_on_user_id"
 
   create_table "profiles", force: :cascade do |t|
     t.string "user_id"

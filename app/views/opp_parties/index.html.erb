@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Opp Parties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @opp_parties.each do |opp_party| %>
+      <tr>
+        <td><%= opp_party.first_name %></td>
+        <td><%= opp_party.last_name %></td>
+        <td><%= opp_party.birth_date %></td>
+        <td><%= opp_party.ssn %></td>
+        <td><%= opp_party.home_phone %></td>
+        <td><%= link_to 'Show', opp_party %></td>
+        <td><%= link_to 'Edit', edit_opp_party_path(opp_party) %></td>
+        <td><%= link_to 'Destroy', opp_party, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Opp party', new_opp_party_path %>
