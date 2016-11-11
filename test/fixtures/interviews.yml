@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yn01: MyString
+  yn02: MyString
+  yn03: MyString
+  yn04: MyString
+  yn05: MyString
+  yn06: MyString
+  document: 
+
+two:
+  yn01: MyString
+  yn02: MyString
+  yn03: MyString
+  yn04: MyString
+  yn05: MyString
+  yn06: MyString
+  document: 

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Interviews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Yn01</th>
+      <th>Yn02</th>
+      <th>Yn03</th>
+      <th>Yn04</th>
+      <th>Yn05</th>
+      <th>Yn06</th>
+      <th>Document</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @interviews.each do |interview| %>
+      <tr>
+        <td><%= interview.yn01 %></td>
+        <td><%= interview.yn02 %></td>
+        <td><%= interview.yn03 %></td>
+        <td><%= interview.yn04 %></td>
+        <td><%= interview.yn05 %></td>
+        <td><%= interview.yn06 %></td>
+        <td><%= interview.document %></td>
+        <td><%= link_to 'Show', interview %></td>
+        <td><%= link_to 'Edit', edit_interview_path(interview) %></td>
+        <td><%= link_to 'Destroy', interview, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Interview', new_interview_path %>

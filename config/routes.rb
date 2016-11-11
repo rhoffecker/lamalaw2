@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :interviews
   resources :opp_parties
   resources :documents
   resources :profiles, only: [:edit, :show, :update]
